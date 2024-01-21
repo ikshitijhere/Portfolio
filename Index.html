@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortFolio</title>
+    <link rel="stylesheet" href="Indexcss.css">
+    
+</head>
+
+<body>
+
+    <div class="Outer">
+        <div class="navbar" >
+
+            <ul class="navbar">
+                <li class="active"><a href="#">PortFolio</a></li>
+                <li class="list-item"><a href="#resume">Resume</a></li>
+                <li class="list-item"><a href="https://instagram.com/ikshitij_here?igshid=MDM4ZDc5MmU=">Linkedin</a></li>
+                <li class="list-item"><a href="#">Projects</a></li>
+            </ul>
+
+        </div>
+
+
+    </div>
+
+    <div class="Intro">
+        <h1>Hey,<br><span class="highlight">Kshitij here</span> &<br> I'm a Life Explorer🧑‍💻</h1>
+
+    </div>
+    <button class="b1">Contact</button>
+    <button class="b2">GitHub</button>
+
+
+    <div class="Dark">
+        <img src="img/night.png"id="Click">
+      
+    </div>
+    <div class="Profile">
+        <img src="img/undraw_code_thinking_re_gka2.svg">
+    </div>
+
+
+    </div>
+    <div class="main">
+        <div class="About">
+            <img src="img/Sql-removebg-preview.png">
+        </div>
+        <div class="About2">
+            <img src="img/Htmlcss-removebg-preview (1).png">
+        </div>
+        <div class="About3">
+            <img src="img/JavaScript.png">
+        </div>
+        <div class="About4">
+            <img src="img/Excel.png">
+        </div>
+    </div>
+    <div class="project">
+        <div class="first"><img src=""></div>
+        <div class="second"></div>
+        <div class="third"></div>
+    </div>
+
+    </div>
+    <div class="foot" data-aos="fade-right">
+        <div class="text" id="slide">
+            <h2>Education profile</h2>
+            <h3>BCA Gradute 2021-24</h3>
+            <h3>HSC PassOut 1<sup>st</sup>Class</h3>
+        </div>
+        <div class="img"><img src="img/2150709796-removebg-preview.png"></div>
+    </div>
+    <div class="Resume">
+        <div class="resume" id="resume">
+            <div class="formimg">
+            <img src="img/3d-portrait-high-school-teenager-removebg-preview.png">
+        </div>
+            <form>
+            <label>Your Name😄</label>
+            <input type="text" height="20" width="50">
+            <label>message💬</label>
+            <input type="text" height="20" width="50">
+            <label>FeedBack💡</label>
+            <input type="text" height="20" width="50">
+            <button>Send📩</button>
+            <div class="Link">
+                 <a href=""><button id="Download">Resume📂</button></a>
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+<script>
+    const badal = document.getElementById("Click");
+    const body = document.getElementsByTagName("body")[0];
+    const nav = document.getElementsByClassName("list-item")
+    console.log(nav)
+    badal.addEventListener("click",function(){
+       if(body.style.backgroundColor == "white"){
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+        nav.style.color = "white"
+       }else{
+        body.style.backgroundColor = "white";
+        body.style.color = "black";
+       }
+    })
+
+
+</script>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Cal{
+            background: url(img/pexels-felix-mittermeier-956981.jpg);
+            display: flex;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+           
+            width: 100vw;
+            height:100vw;
+            align-items: center;
+            border: 1px solid black;
+            
+            justify-content:center;
+            /* padding: 100px; */
+           
+            
+           
+
+        }
+        .innerdiv{
+            width: 350px;
+            height: 350px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgb(255, 255, 255);
+            padding: 40px 30px;
+            background-color: rgba(255, 255, 255, 0.382);
+            backdrop-filter: blur(10px);
+            
+        
+
+        }
+        .innerdiv textarea{
+            padding: 10px 80px;
+            border-radius: 0px;
+            margin: 10px;
+            border: 1px solid black;
+            background-color: transparent;
+        }
+        .innerdiv textarea::placeholder{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            
+            font-family: poppins;
+        }
+        .innerdiv textarea:focus{
+            background-color: rgb(57, 129, 177);
+            transition: 1s;
+            border-radius: 10px;
+            border: 1px solid rgb(57, 129, 177);
+        }
+        .innerdiv textarea:hover{
+            border-radius: 10px;
+            box-shadow: 0 0 10px white;
+            transition: 0.5s;
+        }
+        .innerdiv h1{
+            text-align: center;
+        }
+        .innerdiv button{
+            position: absolute;
+            top: 360px;
+            left: 135px;
+            padding: 10px 40px;
+            
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(215, 242, 250);
+            
+        }
+        .innerdiv button:hover{
+            scale: 1.2;
+            transition: 1.2s;
+        }
+        .innerdiv h2{
+           
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+       
+    </style>
+</head>
+<body><div class="Cal">
+<div class="innerdiv">
+    <h1>BMI Calculator</h1>
+
+    
+    <textarea name="ht" id="ht" placeholder="Your Age"></textarea>
+     
+    
+    <textarea name="Weight" id="Weight" placeholder="Your Weight"></textarea>
+
+    <button onclick="BMICAL()">Calculate</button>
+
+    <h2 id="Result"></h2>
+
+</div>
+</div>
+<script>
+function BMICAL(){
+let Height = document.getElementById("ht").value
+let Weight = document.getElementById("Weight").value
+
+let BMI = ((Weight)/((Height / 100)* (Height /100))).toFixed(2)
+let result = "Your BMI is "+ BMI
+if (BMI < 18.5) {
+    result += `UNDERWEIGHT`;
+}else if(BMI >= 18.5 && BMI <25){
+    result += `NORMAL WEIGHT`;
+}else if (BMI>= 25 && BMI < 30) {
+    result += `OVERWEIGHT`
+}else{
+    result += `OBESE`
+}
+document.getElementById("Result").innerText = result;
+}
+</script>
+</body>
+</html>

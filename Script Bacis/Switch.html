@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome Home !</h1>
+    <textarea name="OutPut" id="OP" cols="30" rows="10"></textarea>
+    <script>
+        
+        var device = prompt("Enter the device you want to switch ON:");
+        switch (device) {
+            case "Fan":
+                var a = "Fan";
+                console.log("Fan is Turned ON");
+                
+                var OutPut = document.querySelector("textarea");
+                OutPut.textContent = `You Turned On ${device}`;
+                break;
+            case "Television":
+                var b = "Television";
+                console.log("Television is Turned ON");
+                var OutPut = document.querySelector("textarea");
+                OutPut.textContent = `You Turned On ${device}`;
+                break;
+                
+            case "fridge":
+                var c = "Fridge";
+                console.log("fridge is Turned ON");
+                var OutPut = document.querySelector("textarea");
+                OutPut.textContent = `You Turned On ${device}`;
+                break;
+            default:
+                break;
+        }
+       
+    </script>
+</body>
+
+</html>
